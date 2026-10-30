@@ -198,7 +198,7 @@ flowchart TD
 
     FinanceUser --> MailGroup[Finance-Mailbox Group]
 
-    MailGroup --> SharedMailbox[finance@ Shared Mailbox]
+    MailGroup --> SharedMailbox[finance@solotechinnovations.onmicrosoft.com - Shared Mailbox]
 
     SharedMailbox --> ReadMail[Read Mail]
 
