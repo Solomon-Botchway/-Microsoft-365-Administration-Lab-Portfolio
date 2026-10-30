@@ -62,7 +62,7 @@ flowchart TB
     Entra --> IDP[Identity Protection]
 ```
 
-## 5. Finance Department Access Model
+## 2. Finance Department Access Model
 ```mermaid {preview="true"}
 flowchart TB
 
@@ -84,7 +84,7 @@ flowchart TB
 ```
 
 
-## 6. Teams and SharePoint Relationship
+## 3. Teams and SharePoint Relationship
 ```mermaid {preview="true"}
 flowchart TD
 
@@ -105,7 +105,7 @@ flowchart TD
     Site --> Payroll[Payroll Library]
 ```
 
-## 7. Shared Mailbox Access Model
+## 4. Shared Mailbox Access Model
 
 ```mermaid {preview="true"}
 flowchart LR
@@ -124,7 +124,7 @@ flowchart LR
 ```
 
 
-## 8. RBAC Model
+## 5. RBAC Model
 
 ```mermaid {preview="true"}
 flowchart TB
@@ -155,7 +155,7 @@ flowchart TB
     HelpdeskAdmin -. Blocked .-> SharePoint
 ```
 
-## 9. Conditional Access Workflow
+## 6. Conditional Access Workflow
 ```mermaid {preview="true"}
 flowchart TD
 
@@ -174,7 +174,7 @@ flowchart TD
     Failure --> Block[Access Blocked]
 ```
 
-## 10. Identity Protection Investigation
+## 7. Identity Protection Investigation
 ```mermaid {preview="true"}
 flowchart TD
 
@@ -195,7 +195,7 @@ flowchart TD
     Revoke --> MFA[Require MFA Re-registration]
 ```
 
-## 11. Troubleshooting Methodology
+## 8. Troubleshooting Methodology
 ```mermaid {preview="true"}
 flowchart TD
 
@@ -225,7 +225,7 @@ flowchart TD
 ```
 
 
-## 2. User Onboarding Workflow
+## 9. User Onboarding Workflow
 ```mermaid {preview="true"}
 flowchart TD
 
@@ -252,8 +252,7 @@ flowchart TD
     K --> L[User Ready]
 ```
 
-## 3. User Offboarding Workflow
-
+## 10. User Offboarding Workflow
 
 ```mermaid {preview="true"}
 flowchart TD
@@ -278,8 +277,8 @@ flowchart TD
 
     I --> J[Archive / Retain Data]
 ```
-## 
-## 4. Auditor Access Request Workflow
+ 
+## 11. Auditor Access Request Workflow
 
 ```mermaid {preview="true"}
 flowchart TD
