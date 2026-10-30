@@ -77,3 +77,204 @@ flowchart TD
 
     I --> J[Archive / Retain Data]
 ```
+## 4. Auditor Access Request Workflow
+
+```mermaid {preview="true"}
+flowchart TD
+
+    A[Audit Request Raised]
+
+    A --> B[Create Temporary User]
+
+    B --> C[Assign License]
+
+    C --> D[Add Finance Team]
+
+    D --> E[Add Finance Projects]
+
+    E --> F[Add Finance Payroll]
+
+    F --> G[Add Shared Mailbox Access]
+
+    G --> H[Add Distribution Lists]
+
+    H --> I[Grant SharePoint Access]
+
+    I --> J[Validate Resource Access]
+
+    J --> K[Audit Activities Performed]
+
+    K --> L[Remove Access]
+
+    L --> M[Disable Account]
+```
+
+## 5. Finance Department Access Model
+```mermaid {preview="true"}
+flowchart TB
+
+    User[Finance User]
+
+    User --> FinanceTeam[Finance Team]
+
+    FinanceTeam --> Budgets[Budgets Library]
+    FinanceTeam --> Invoices[Invoices Library]
+    FinanceTeam --> Projects[Projects Library]
+
+    PayrollUser[Payroll User]
+
+    PayrollUser --> PayrollGroup[Finance-Payroll Group]
+
+    PayrollGroup --> PayrollLibrary[Payroll Library]
+
+    FinanceTeam -. No Access .-> PayrollLibrary
+```
+
+
+## 6. Teams and SharePoint Relationship
+```mermaid {preview="true"}
+flowchart TD
+
+    Team[Finance Team]
+
+    Team --> Channel1[General]
+    Team --> Channel2[Projects]
+    Team --> Channel3[Budgets]
+    Team --> Channel4[Payroll Private Channel]
+
+    Team --> M365Group[Microsoft 365 Group]
+
+    M365Group --> Site[Finance SharePoint Site]
+
+    Site --> Docs[Documents Library]
+    Site --> Budgets[Budgets Library]
+    Site --> Projects[Projects Library]
+    Site --> Payroll[Payroll Library]
+```
+
+## 7. Shared Mailbox Access Model
+```mermaid {preview="true"}
+flowchart LR
+
+    FinanceUser[Finance Users]
+
+    FinanceUser --> MailGroup[Finance-Mailbox Group]
+
+    MailGroup --> SharedMailbox[finance@ Shared Mailbox]
+
+    SharedMailbox --> ReadMail[Read Mail]
+
+    SharedMailbox --> SendAs[Send As]
+
+    SharedMailbox --> SharedCalendar[Shared Calendar]
+```
+
+
+## 8. RBAC Model
+
+```mermaid {preview="true"}
+flowchart TB
+
+    GlobalAdmin[Global Administrator]
+
+    ExchangeAdmin[Exchange Administrator]
+
+    TeamsAdmin[Teams Administrator]
+
+    SPAdmin[SharePoint Administrator]
+
+    HelpdeskAdmin[Helpdesk Administrator]
+
+    GlobalAdmin --> Tenant[Tenant Management]
+
+    ExchangeAdmin --> Exchange[Exchange Online]
+
+    TeamsAdmin --> Teams[Teams Administration]
+
+    SPAdmin --> SharePoint[SharePoint Administration]
+
+    HelpdeskAdmin --> Passwords[Password Resets]
+    HelpdeskAdmin --> Users[User Support]
+
+    HelpdeskAdmin -. Blocked .-> Exchange
+    HelpdeskAdmin -. Blocked .-> Teams
+    HelpdeskAdmin -. Blocked .-> SharePoint
+```
+
+## 9. Conditional Access Workflow
+```mermaid {preview="true"}
+flowchart TD
+
+    User[Administrator]
+
+    User --> Login[Sign In]
+
+    Login --> Policy[Conditional Access Policy]
+
+    Policy --> MFA[MFA Required]
+
+    MFA --> Success[Access Granted]
+
+    Policy --> Failure[MFA Not Completed]
+
+    Failure --> Block[Access Blocked]
+```
+
+## 10. Identity Protection Investigation
+```mermaid {preview="true"}
+flowchart TD
+
+    Detection[Risk Detection]
+
+    Detection --> RiskUser[Risky User]
+
+    RiskUser --> Logs[Review Sign-In Logs]
+
+    Logs --> Analyze[Analyze Activity]
+
+    Analyze --> Safe[Mark Safe]
+
+    Analyze --> Reset[Reset Password]
+
+    Reset --> Revoke[Revoke Sessions]
+
+    Revoke --> MFA[Require MFA Re-registration]
+```
+
+## 11. Troubleshooting Methodology
+```mermaid {preview="true"}
+flowchart TD
+
+    Issue[User Reports Issue]
+
+    Issue --> Identify[Identify Service]
+
+    Identify --> Exchange[Exchange]
+    Identify --> Teams[Teams]
+    Identify --> SharePoint[SharePoint]
+    Identify --> Entra[Entra ID]
+
+    Exchange --> LicenseCheck[Check License]
+    Teams --> LicenseCheck
+    SharePoint --> LicenseCheck
+    Entra --> LicenseCheck
+
+    LicenseCheck --> Permissions[Check Permissions]
+
+    Permissions --> Logs[Review Logs]
+
+    Logs --> Resolution[Implement Fix]
+
+    Resolution --> Test[Test with User]
+
+    Test --> Closed[Ticket Closed]
+```
+## 
+
+## 
+
+## 
+
+## 
+
+
