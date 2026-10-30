@@ -62,38 +62,6 @@ flowchart TB
     Entra --> IDP[Identity Protection]
 ```
 
-## 4. Auditor Access Request Workflow
-
-```mermaid {preview="true"}
-flowchart TD
-
-    A[Audit Request Raised]
-
-    A --> B[Create Temporary User]
-
-    B --> C[Assign License]
-
-    C --> D[Add Finance Team]
-
-    D --> E[Add Finance Projects]
-
-    E --> F[Add Finance Payroll]
-
-    F --> G[Add Shared Mailbox Access]
-
-    G --> H[Add Distribution Lists]
-
-    H --> I[Grant SharePoint Access]
-
-    I --> J[Validate Resource Access]
-
-    J --> K[Audit Activities Performed]
-
-    K --> L[Remove Access]
-
-    L --> M[Disable Account]
-```
-
 ## 5. Finance Department Access Model
 ```mermaid {preview="true"}
 flowchart TB
@@ -311,11 +279,37 @@ flowchart TD
     I --> J[Archive / Retain Data]
 ```
 ## 
+## 4. Auditor Access Request Workflow
 
-## 
+```mermaid {preview="true"}
+flowchart TD
 
-## 
+    A[Audit Request Raised]
 
-## 
+    A --> B[Create Temporary User]
+
+    B --> C[Assign License]
+
+    C --> D[Add Finance Team]
+
+    D --> E[Add Finance Projects]
+
+    E --> F[Add Finance Payroll]
+
+    F --> G[Add Shared Mailbox Access]
+
+    G --> H[Add Distribution Lists]
+
+    H --> I[Grant SharePoint Access]
+
+    I --> J[Validate Resource Access]
+
+    J --> K[Audit Activities Performed]
+
+    K --> L[Remove Access]
+
+    L --> M[Disable Account]
+```
+
 
 
