@@ -253,7 +253,7 @@ Success
 ---
 
 ## OneDrive Architecture
-Markdown
+
 ```mermaid {preview="true"}
 flowchart TB
 
@@ -281,6 +281,7 @@ flowchart TB
 
     Manager --> PersonalSite
 ```
+
 ## OneDrive Offboarding Workflow
 ```mermaid {preview="true"}
 flowchart TD
