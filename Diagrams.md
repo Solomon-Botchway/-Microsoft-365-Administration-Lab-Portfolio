@@ -192,19 +192,19 @@ flowchart TD
 ## 7. Shared Mailbox Access Model
 
 ```mermaid {preview="true"}
-flowchart TD
+flowchart LR
 
-    FinanceUser[Finance Users]
+    FinanceUsers["Finance Users"]
 
-    FinanceUser --> MailGroup[Finance-Mailbox Group]
+    FinanceUsers --> MailGroup["Finance Mail Enabled Group"]
 
-    MailGroup --> SharedMailbox[finance@solotechinnovations.onmicrosoft.com - Shared Mailbox]
+    MailGroup --> SharedMailbox["Finance Shared Mailbox"]
 
-    SharedMailbox --> ReadMail[Read Mail]
+    SharedMailbox --> ReadMail["Read Email"]
 
-    SharedMailbox --> SendAs[Send As]
+    SharedMailbox --> SendAs["Send As Permission"]
 
-    SharedMailbox --> SharedCalendar[Shared Calendar]
+    SharedMailbox --> SharedCalendar["Shared Calendar"]
 ```
 
 
