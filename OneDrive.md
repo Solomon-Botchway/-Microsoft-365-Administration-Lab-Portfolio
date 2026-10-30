@@ -252,16 +252,8 @@ Success
 
 ---
 
-## Key Learning Outcomes
-
-- OneDrive for Business is backed by SharePoint Online.
-- User file access differs from site administration.
-- Site Collection Administrator permissions provide management capabilities over personal sites.
-- User offboarding requires consideration of data ownership and retention.
-- Business files remain available after account disablement.
-- SharePoint administration skills are essential for advanced OneDrive management.
-
-
+## OneDrive Architecture
+Markdown
 ```mermaid {preview="true"}
 flowchart TB
 
@@ -289,7 +281,7 @@ flowchart TB
 
     Manager --> PersonalSite
 ```
-
+## OneDrive Offboarding Workflow
 ```mermaid {preview="true"}
 flowchart TD
 
@@ -321,3 +313,11 @@ flowchart TD
 
     AccessGranted --> ReviewFiles["Review Business Files"]
 ```
+## Key Learning Outcomes
+
+- OneDrive for Business is backed by SharePoint Online.
+- User file access differs from site administration.
+- Site Collection Administrator permissions provide management capabilities over personal sites.
+- User offboarding requires consideration of data ownership and retention.
+- Business files remain available after account disablement.
+- SharePoint administration skills are essential for advanced OneDrive management.
