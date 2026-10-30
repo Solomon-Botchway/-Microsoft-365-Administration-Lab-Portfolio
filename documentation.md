@@ -4,18 +4,9 @@ This project simulates a small-to-medium business Microsoft 365 environment call
 
 The objective of the lab is to gain hands-on experience with Microsoft 365 administration, Microsoft Entra ID, Exchange Online, identity management, RBAC, security, and helpdesk operations using real-world enterprise scenarios.
 
----
-
-## Lab Environment
-
-### On-Premises Infrastructure
-
-| Server | Role |
-|----------|----------|
-| DC01 | Active Directory Domain Controller |
-| FS01 | File Server |
-
-
+## Structure
+```text
+Contents
 m365-enterprise-administration-lab/
 │
 ├── README.md
@@ -44,3 +35,6 @@ m365-enterprise-administration-lab/
     ├── shared-mailbox-troubleshooting.md
     ├── sharepoint-permissions.md
     └── identity-protection-investigation.md
+
+---
+```
