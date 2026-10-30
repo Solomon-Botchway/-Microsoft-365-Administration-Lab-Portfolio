@@ -190,8 +190,9 @@ flowchart TD
 ```
 
 ## 7. Shared Mailbox Access Model
+
 ```mermaid {preview="true"}
-flowchart LR
+flowchart TD
 
     FinanceUser[Finance Users]
 
