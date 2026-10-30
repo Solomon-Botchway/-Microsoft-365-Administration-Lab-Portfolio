@@ -1,3 +1,40 @@
+## Complete Microsoft 365 Environment Diagram
+```mermaid {preview="true"}
+flowchart TB
+
+    Users[20 Users]
+
+    Users --> Entra[Microsoft Entra ID]
+
+    Entra --> Groups[Security Groups]
+    Entra --> Admins[Admin Roles]
+    Entra --> MFA[MFA]
+    Entra --> CA[Conditional Access]
+    Entra --> Risk[Identity Protection]
+
+    Groups --> Exchange[Exchange Online]
+    Groups --> Teams[Microsoft Teams]
+    Groups --> SharePoint[SharePoint Online]
+
+    Exchange --> SharedMail[Shared Mailboxes]
+    Exchange --> DistLists[Distribution Lists]
+
+    Teams --> HRTeam[HR Team]
+    Teams --> ITTeam[IT Team]
+    Teams --> FinTeam[Finance Team]
+    Teams --> SalesTeam[Sales Team]
+    Teams --> CSGTeam[CSG Team]
+
+    SharePoint --> Libraries[Document Libraries]
+
+    Libraries --> Payroll[Payroll Restricted Library]
+
+    Risk --> SignInLogs[Sign-In Logs]
+    Risk --> AuditLogs[Audit Logs]
+```
+
+
+
 ## 1. High-Level Microsoft 365 Architecture
 
 ```mermaid {preview="true"}
