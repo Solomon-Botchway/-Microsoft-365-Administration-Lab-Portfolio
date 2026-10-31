@@ -263,7 +263,74 @@ Purview permissions must be assigned separately through compliance role groups a
 
 - <img width="1441" height="784" alt="image" src="https://github.com/user-attachments/assets/d042a39f-9cf5-405e-ab51-450175d04e4c" />
 
-<img width="1228" height="613" alt="image" src="https://github.com/user-attachments/assets/7f31ee62-a244-4e2f-a79e-f89b0f9aa40a" />
+```mermaid {preview="true"}
+flowchart TB
 
-<img width="1311" height="636" alt="image" src="https://github.com/user-attachments/assets/a3431c15-a2c5-4a5f-85f5-cbcaab3a798e" />
+    Entra["Microsoft Entra ID"]
+    Exchange["Exchange Online"]
+    Teams["Microsoft Teams"]
+    SharePoint["SharePoint Online"]
+    OneDrive["OneDrive for Business"]
 
+    Entra --> Purview["Microsoft Purview"]
+    Exchange --> Purview
+    Teams --> Purview
+    SharePoint --> Purview
+    OneDrive --> Purview
+
+    Purview --> Audit["Audit Search"]
+
+    Purview --> Content["Content Search"]
+
+    Purview --> EDiscovery["eDiscovery"]
+
+    Purview --> Retention["Retention Policies"]
+
+    Purview --> Governance["Compliance & Governance"]
+```
+
+```mermaid {preview="true"}
+flowchart LR
+
+    Activity["User Activity"]
+
+    Activity --> Upload["Upload File"]
+    Activity --> Edit["Edit File"]
+    Activity --> Delete["Delete File"]
+    Activity --> Mail["Send Email"]
+    Activity --> Teams["Teams Message"]
+
+    Upload --> Ingest["Audit Ingestion"]
+    Edit --> Ingest
+    Delete --> Ingest
+    Mail --> Ingest
+    Teams --> Ingest
+
+    Ingest --> Purview["Microsoft Purview"]
+
+    Purview --> Search["Audit Search"]
+
+    Search --> Investigation["Compliance Investigation"]
+
+    Investigation --> Findings["Investigation Findings"]
+```
+
+```mermaid {preview="true"}
+flowchart TD
+
+    GlobalAdmin["Global Administrator"]
+
+    GlobalAdmin --> Purview["Microsoft Purview"]
+
+    Purview --> Case["eDiscovery Case"]
+
+    Case --> Error["Access Denied"]
+
+    Error --> Roles["Assign eDiscovery Roles"]
+
+    Roles --> Member["Case Member"]
+
+    Member --> Access["Content Search Access"]
+
+    Access --> Investigation["Compliance Investigation"]
+```
