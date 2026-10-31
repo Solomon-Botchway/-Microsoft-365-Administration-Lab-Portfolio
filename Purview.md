@@ -315,6 +315,5 @@ flowchart LR
     Investigation --> Findings["Investigation Findings"]
 ```
 
-<img width="932" height="369" alt="Screenshot 2026-10-31 192430" src="https://github.com/user-attachments/assets/fcc98019-efdc-4616-9003-3ad2ae328a8a" />
 
 
