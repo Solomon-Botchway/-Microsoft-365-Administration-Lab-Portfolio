@@ -95,7 +95,34 @@ Validated:
 - File Recovery
 
 ---
+## OneDrive Architecture & Delegation Model
 
+```mermaid {preview="true"}
+flowchart LR
+
+    Problem["Finance Manager Needs Access"]
+
+    Problem --> Attempt1["Create Link To Files"]
+    Problem --> Attempt2["Direct OneDrive URL"]
+
+    Attempt1 --> Failure1["Access Denied"]
+    Attempt2 --> Failure2["Access Denied"]
+
+    Failure1 --> Investigate
+    Failure2 --> Investigate
+
+    Investigate["Investigate Root Cause"]
+
+    Investigate --> Discovery["OneDrive = SharePoint Site Collection"]
+
+    Discovery --> Resolution["Open User Profiles"]
+
+    Resolution --> SiteAdmin["Manage Site Collection Owners"]
+
+    SiteAdmin --> Grant["Grant Herty Access"]
+
+    Grant --> Success["Access Successful"]
+```
 ## Employee Offboarding Scenario
 
 ### Business Requirement
@@ -340,35 +367,8 @@ flowchart TB
 
     Complete["Offboarding Completed"]
 ```
-text
-## OneDrive Architecture & Delegation Model
 
-```mermaid {preview="true"}
-flowchart LR
 
-    Problem["Finance Manager Needs Access"]
-
-    Problem --> Attempt1["Create Link To Files"]
-    Problem --> Attempt2["Direct OneDrive URL"]
-
-    Attempt1 --> Failure1["Access Denied"]
-    Attempt2 --> Failure2["Access Denied"]
-
-    Failure1 --> Investigate
-    Failure2 --> Investigate
-
-    Investigate["Investigate Root Cause"]
-
-    Investigate --> Discovery["OneDrive = SharePoint Site Collection"]
-
-    Discovery --> Resolution["Open User Profiles"]
-
-    Resolution --> SiteAdmin["Manage Site Collection Owners"]
-
-    SiteAdmin --> Grant["Grant Herty Access"]
-
-    Grant --> Success["Access Successful"]
-```
 ## OneDrive Architecture & Delegation Model
 ```mermaid {preview="true"}
 flowchart TB
