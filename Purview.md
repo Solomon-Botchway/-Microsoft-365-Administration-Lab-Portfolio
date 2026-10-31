@@ -256,3 +256,14 @@ Purview permissions must be assigned separately through compliance role groups a
 - Configure Retention Labels.
 - Explore eDiscovery investigations.
 - Implement Data Lifecycle Management controls.
+
+<img width="1897" height="895" alt="image" src="https://github.com/user-attachments/assets/dbbea261-348d-4ff8-aea4-abaa175f03e8" />
+
+<img width="1870" height="880" alt="image" src="https://github.com/user-attachments/assets/55dbdc0f-2961-4667-b0a0-acd202e9f9fe" />
+
+- <img width="1441" height="784" alt="image" src="https://github.com/user-attachments/assets/d042a39f-9cf5-405e-ab51-450175d04e4c" />
+
+<img width="1228" height="613" alt="image" src="https://github.com/user-attachments/assets/7f31ee62-a244-4e2f-a79e-f89b0f9aa40a" />
+
+<img width="1311" height="636" alt="image" src="https://github.com/user-attachments/assets/a3431c15-a2c5-4a5f-85f5-cbcaab3a798e" />
+
