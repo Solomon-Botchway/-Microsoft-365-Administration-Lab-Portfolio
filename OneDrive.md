@@ -7,7 +7,35 @@ Implemented and administered OneDrive for Business as part of a Microsoft 365 en
 This phase focused on understanding how OneDrive integrates with SharePoint Online, file retention, employee offboarding processes, manager access delegation, and business data recovery.
 
 ---
+## OneDrive Architecture
 
+```mermaid {preview="true"}
+flowchart TB
+
+    User["Microsoft 365 User"]
+
+    User --> OneDrive["OneDrive for Business"]
+
+    OneDrive --> PersonalSite["Personal SharePoint Site"]
+
+    PersonalSite --> Documents["Documents"]
+
+    PersonalSite --> Meetings["Meeting Files"]
+
+    PersonalSite --> Recordings["Teams Recordings"]
+
+    PersonalSite --> Copilot["Copilot Chat Files"]
+
+    PersonalSite --> SharedFiles["Shared Files"]
+
+    Admin["SharePoint Administrator"]
+
+    Admin --> PersonalSite
+
+    Manager["Delegated Manager"]
+
+    Manager --> PersonalSite
+```
 ## OneDrive Provisioning
 
 Validated automatic OneDrive provisioning for licensed Microsoft 365 users.
@@ -251,36 +279,6 @@ Success
 ```
 
 ---
-
-## OneDrive Architecture
-
-```mermaid {preview="true"}
-flowchart TB
-
-    User["Microsoft 365 User"]
-
-    User --> OneDrive["OneDrive for Business"]
-
-    OneDrive --> PersonalSite["Personal SharePoint Site"]
-
-    PersonalSite --> Documents["Documents"]
-
-    PersonalSite --> Meetings["Meeting Files"]
-
-    PersonalSite --> Recordings["Teams Recordings"]
-
-    PersonalSite --> Copilot["Copilot Chat Files"]
-
-    PersonalSite --> SharedFiles["Shared Files"]
-
-    Admin["SharePoint Administrator"]
-
-    Admin --> PersonalSite
-
-    Manager["Delegated Manager"]
-
-    Manager --> PersonalSite
-```
 
 ## Key Learning Outcomes
 
