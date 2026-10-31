@@ -315,22 +315,6 @@ flowchart LR
     Investigation --> Findings["Investigation Findings"]
 ```
 
-```mermaid {preview="true"}
-flowchart TD
+<img width="932" height="369" alt="Screenshot 2026-10-31 192430" src="https://github.com/user-attachments/assets/fcc98019-efdc-4616-9003-3ad2ae328a8a" />
 
-    GlobalAdmin["Global Administrator"]
 
-    GlobalAdmin --> Purview["Microsoft Purview"]
-
-    Purview --> Case["eDiscovery Case"]
-
-    Case --> Error["Access Denied"]
-
-    Error --> Roles["Assign eDiscovery Roles"]
-
-    Roles --> Member["Case Member"]
-
-    Member --> Access["Content Search Access"]
-
-    Access --> Investigation["Compliance Investigation"]
-```
