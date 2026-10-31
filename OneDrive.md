@@ -324,7 +324,7 @@ flowchart TD
 - SharePoint administration skills are essential for advanced OneDrive management.
 
 ## Improved OneDrive Offboarding Process
--```mermaid {preview="true"}
+```mermaid {preview="true"}
 flowchart TB
 
     Offboard["Employee Departure"]
