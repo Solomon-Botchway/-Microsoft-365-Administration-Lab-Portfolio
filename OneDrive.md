@@ -282,38 +282,6 @@ flowchart TB
     Manager --> PersonalSite
 ```
 
-## OneDrive Offboarding Workflow
-```mermaid {preview="true"}
-flowchart TD
-
-    User["Paul Murphy Leaves Organisation"]
-
-    User --> Block["Block Sign-In"]
-
-    Block --> RemoveGroups["Remove Group Memberships"]
-
-    RemoveGroups --> RemoveTeams["Remove Teams Access"]
-
-    RemoveTeams --> RemoveMailbox["Remove Shared Mailbox Access"]
-
-    RemoveMailbox --> RemoveLicense["Remove Microsoft 365 License"]
-
-    RemoveLicense --> RetainData["OneDrive Data Retained"]
-
-    RetainData --> ManagerRequest["Manager Requests Access"]
-
-    ManagerRequest --> SPAdmin["SharePoint Admin Center"]
-
-    SPAdmin --> UserProfiles["User Profiles"]
-
-    UserProfiles --> SiteOwners["Manage Site Collection Owners"]
-
-    SiteOwners --> AddManager["Add Herty Yankson"]
-
-    AddManager --> AccessGranted["Manager Access Granted"]
-
-    AccessGranted --> ReviewFiles["Review Business Files"]
-```
 ## Key Learning Outcomes
 
 - OneDrive for Business is backed by SharePoint Online.
@@ -323,7 +291,7 @@ flowchart TD
 - Business files remain available after account disablement.
 - SharePoint administration skills are essential for advanced OneDrive management.
 
-## Improved OneDrive Offboarding Process
+## OneDrive Offboarding Process
 ```mermaid {preview="true"}
 flowchart TB
 
