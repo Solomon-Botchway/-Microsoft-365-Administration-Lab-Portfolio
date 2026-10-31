@@ -322,3 +322,142 @@ flowchart TD
 - User offboarding requires consideration of data ownership and retention.
 - Business files remain available after account disablement.
 - SharePoint administration skills are essential for advanced OneDrive management.
+
+## Improved OneDrive Offboarding Process
+-```mermaid {preview="true"}
+flowchart TB
+
+    Offboard["Employee Departure"]
+
+    Offboard --> Security
+    Offboard --> Access
+    Offboard --> Data
+
+    subgraph Security["Security Actions"]
+        Block["Block Sign-In"]
+        MFA["Invalidate Sessions"]
+        Audit["Review Sign-In Logs"]
+    end
+
+    subgraph Access["Access Removal"]
+        Groups["Remove Group Memberships"]
+        Teams["Remove Team Memberships"]
+        Mailbox["Remove Shared Mailbox Access"]
+        DL["Remove Distribution Lists"]
+    end
+
+    subgraph Data["Data Management"]
+        License["Remove M365 License"]
+        Retain["OneDrive Retained"]
+        Manager["Manager Requests Files"]
+    end
+
+    Block --> MFA
+    MFA --> Audit
+
+    Groups --> Teams
+    Teams --> Mailbox
+    Mailbox --> DL
+
+    License --> Retain
+    Retain --> Manager
+
+    Manager --> SPO["SharePoint Admin Center"]
+    SPO --> Profiles["User Profiles"]
+    Profiles --> Owners["Site Collection Owners"]
+
+    Owners --> Herty["Grant Herty Access"]
+
+    Audit --> Complete
+    DL --> Complete
+    Herty --> Complete
+
+    Complete["Offboarding Completed"]
+```
+```text
+## OneDrive Architecture & Delegation Model
+
+```mermaid {preview="true"}
+flowchart LR
+
+    Problem["Finance Manager Needs Access"]
+
+    Problem --> Attempt1["Create Link To Files"]
+    Problem --> Attempt2["Direct OneDrive URL"]
+
+    Attempt1 --> Failure1["Access Denied"]
+    Attempt2 --> Failure2["Access Denied"]
+
+    Failure1 --> Investigate
+    Failure2 --> Investigate
+
+    Investigate["Investigate Root Cause"]
+
+    Investigate --> Discovery["OneDrive = SharePoint Site Collection"]
+
+    Discovery --> Resolution["Open User Profiles"]
+
+    Resolution --> SiteAdmin["Manage Site Collection Owners"]
+
+    SiteAdmin --> Grant["Grant Herty Access"]
+
+    Grant --> Success["Access Successful"]
+```
+## OneDrive Architecture & Delegation Model
+```mermaid {preview="true"}
+flowchart TB
+
+    User["Paul Murphy"]
+
+    User --> OneDrive["OneDrive for Business"]
+
+    OneDrive --> Site["Personal SharePoint Site"]
+
+    Site --> Docs["Documents"]
+    Site --> Meetings["Meetings"]
+    Site --> Recordings["Recordings"]
+    Site --> Copilot["Copilot Files"]
+
+    Manager["Finance Manager"]
+
+    SPAdmin["SharePoint Admin"]
+
+    SPAdmin --> Site
+
+    SPAdmin --> SiteCollection["Site Collection Owners"]
+
+    SiteCollection --> Manager
+
+    Manager --> Docs
+    Manager --> Meetings
+    Manager --> Recordings
+    Manager --> Copilot
+```
+## Visual Enterprise Lifecycle Diagram
+
+```mermaid {preview="true"}
+flowchart LR
+
+    A["User Created"]
+    B["Assigned License"]
+    C["OneDrive Provisioned"]
+    D["Files Created"]
+    E["User Leaves Company"]
+    F["Account Disabled"]
+    G["Access Removed"]
+    H["OneDrive Retained"]
+    I["Manager Access Granted"]
+    J["Business Data Recovered"]
+    K["Retention Expires"]
+
+    A --> B --> C --> D --> E --> F
+
+    F --> G
+    G --> H
+
+    H --> I
+
+    I --> J
+
+    H --> K
+```
