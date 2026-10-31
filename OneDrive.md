@@ -374,7 +374,7 @@ flowchart TB
 
     Complete["Offboarding Completed"]
 ```
-```text
+text
 ## OneDrive Architecture & Delegation Model
 
 ```mermaid {preview="true"}
