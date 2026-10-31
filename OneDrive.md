@@ -127,7 +127,7 @@ Grant Finance Manager access to OneDrive data belonging to a departed employee.
 Manager:
 
 ```text
-Herty Yankson (FIN)
+Herty Yank (FIN)
 ```
 
 Departed User:
@@ -182,7 +182,7 @@ SharePoint Admin Center
 Assigned:
 
 ```text
-Herty Yankson (FIN)
+Herty Yank (FIN)
 ```
 
 as:
